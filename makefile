@@ -11,7 +11,7 @@ CHECK_SRC:
 	fi
 
 compile_complete: CHECK_SRC
-	@gcc $(CFLAGS) $(SRC) -o a.out
+	@/usr/bin/time -p gcc $(CFLAGS) $(SRC) -o a.out 2>&1
 
 clang: CHECK_SRC
 	@clang $(CFLAGS) $(SRC) -o a.out
